@@ -59,8 +59,6 @@ export class AuthService extends PrismaClient implements OnModuleInit {
   }
 
   async loginUser({ email, password }: LoginUserDto) {
-    this.logger.log('PAse por el login');
-    this.logger.log(email, password);
     try {
       const user = await this.user.findUnique({
         where: {
